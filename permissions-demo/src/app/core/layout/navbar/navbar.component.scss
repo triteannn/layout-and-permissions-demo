@@ -1,0 +1,11 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+main {
+  padding: 2rem;
+  // header is 64px tall and 4rem represents paddings top-bottom
+  height: calc(100% - 4rem - 64px);
+}

@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <div>
+    <a routerLink="/home">Donation Manager</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="1rem" class="navigation-items">
+      <li>
+        <a *hasPermissions="'DONORS_READ'" routerLink="/donors">Donors</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

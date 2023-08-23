@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="buttons-header">
+    <button
+      *hasPermissions="'DONORS_ADD'"
+      mat-raised-button
+      color="primary"
+      (click)="onAddClick()"
+    >
+      Add
+    </button>
+  </div>
+  <div class="table-responsive">
+    <table mat-table [dataSource]="mockData" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="tableColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: tableColumns"></tr>
+    </table>
+  </div>
+</div>
